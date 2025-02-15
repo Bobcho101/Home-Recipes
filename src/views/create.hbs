@@ -1,0 +1,47 @@
+<section class="form-container">
+    {{#if error}}
+    <div class="error-container">
+        <p>{{error}}</p>
+    </div>
+
+    <h2>Create Recipe</h2>
+    <form method="POST">
+        <label for="title">Recipe Title:</label>
+        <input type="text" id="title" name="title" value="{{data.title}}">
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description">{{data.description}}</textarea>
+
+        <label for="ingredients">Ingredients:</label>
+        <textarea id="ingredients" name="ingredients">{{data.ingredients}}</textarea>
+
+        <label for="instructions">Instructions:</label>
+        <textarea id="instructions" name="instructions">{{data.instructions}}</textarea>
+
+        <label for="image">Image URL:</label>
+        <input type="url" id="image" name="image" value="{{data.image}}">
+
+        <button type="submit">Create Recipe</button>
+    </form>
+    {{else}}
+    <h2>Create Recipe</h2>
+    <form method="POST">
+        <label for="title">Recipe Title:</label>
+        <input type="text" id="title" name="title">
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description"></textarea>
+
+        <label for="ingredients">Ingredients:</label>
+        <textarea id="ingredients" name="ingredients"></textarea>
+
+        <label for="instructions">Instructions:</label>
+        <textarea id="instructions" name="instructions"></textarea>
+
+        <label for="image">Image URL:</label>
+        <input type="url" id="image" name="image">
+
+        <button type="submit">Create Recipe</button>
+    </form>
+    {{/if}}
+</section>
